@@ -1,8 +1,12 @@
 import "./App.css";
-import data from "../data.json";
+import UserProfile from "../src/components/UserProfile";
 
 function App() {
-  return <>{data.map((data) => console.log(data))}</>;
+  return (
+    <>
+      <UserProfile />
+    </>
+  );
 }
 
 export default App;
