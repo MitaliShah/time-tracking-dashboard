@@ -3,12 +3,12 @@ import data from "../../data.json";
 import Cards from "./Cards.jsx";
 import { DEFAULT_VIEW } from "../constants.js";
 const allViews = ["daily", "weekly", "monthly"];
-// console.log(allViews);
+
 export default function DataViewSwitcher() {
   const [selectedView, setSelectedView] = useState(DEFAULT_VIEW);
 
   return (
-    <>
+    <div>
       {allViews.map((view) => (
         <a
           onClick={(event) => {
@@ -22,6 +22,6 @@ export default function DataViewSwitcher() {
         </a>
       ))}
       <Cards data={data} selectedView={selectedView} />
-    </>
+    </div>
   );
 }

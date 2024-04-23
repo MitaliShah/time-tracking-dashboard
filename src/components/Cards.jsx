@@ -1,6 +1,12 @@
+const generateCardBG = (title) => {
+  const backgroundColor = hsl();
+  if (title === "work") {
+  }
+};
+
 export default function Cards({ data, selectedView }) {
   return (
-    <>
+    <div>
       {data.map((data) => {
         const { title, timeframes } = data;
         const { current } = timeframes[selectedView];
@@ -13,6 +19,6 @@ export default function Cards({ data, selectedView }) {
           </div>
         );
       })}
-    </>
+    </div>
   );
 }
