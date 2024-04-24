@@ -54,6 +54,7 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column-reverse;
   margin-top: 24px;
+  border-radius: 8px;
 `;
 
 // const SVG = styled.div`
@@ -69,7 +70,8 @@ const Wrapper = styled.div`
 const ContentDiv = styled.div`
   padding: 28px 24px;
   background-color: var(--dark-blue);
-  /* padding-top: 38px; */
+  border-radius: 8px;
+  margin-bottom: -0.5px;
 `;
 
 const Title = styled.h2`

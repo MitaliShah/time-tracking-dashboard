@@ -27,6 +27,7 @@ export default function DataViewSwitcher({ setSelectedView }) {
 const Wrapper = styled.div`
   background-color: var(--dark-blue);
   border-radius: 8px;
+  margin-bottom: -24px;
 `;
 
 const Link = styled.a`
