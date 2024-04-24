@@ -1,8 +1,8 @@
-const generateCardBG = (title) => {
-  const backgroundColor = hsl();
-  if (title === "work") {
-  }
-};
+// const generateCardBG = (title) => {
+//   const backgroundColor = hsl();
+//   if (title === "work") {
+//   }
+// };
 
 export default function Cards({ data, selectedView }) {
   return (
