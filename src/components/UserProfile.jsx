@@ -61,4 +61,5 @@ const LastName = styled.span`
 
 const Small = styled.small`
   font-size: 15px;
+  color: var(--pale-blue);
 `;
