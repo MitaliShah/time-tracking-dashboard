@@ -34,5 +34,7 @@ const Main = styled.main`
     max-width: 1440px;
     display: grid;
     grid-template-columns: 255px 1fr;
+    gap: 0;
+    grid-column-gap: 30px;
   }
 `;

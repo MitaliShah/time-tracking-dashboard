@@ -97,12 +97,20 @@ const ContentDiv = styled.div`
 
 const Title = styled.h2`
   font-size: 18px;
+
+  @media (min-width: 1440px) {
+    margin-bottom: 24px;
+    font-weight: 500;
+  }
 `;
 
 const TitleandEllipsisWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media (min-width: 1440px) {
+    align-items: baseline;
+  }
 `;
 
 const WrapHours = styled.div`
@@ -129,6 +137,9 @@ const SVG = styled.img`
 const CurrentHrs = styled.span`
   font-size: 32px;
   font-weight: 300;
+  @media (min-width: 1440px) {
+    font-size: 56px;
+  }
 `;
 
 const PreviousHrs = styled.span`
@@ -139,7 +150,8 @@ const PreviousHrs = styled.span`
 const Grid = styled.div`
   @media (min-width: 1440px) {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-columns: repeat(3, 1fr); */
+    grid-template-columns: repeat(3, 255px);
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 30px;
     grid-row-gap: 30px;

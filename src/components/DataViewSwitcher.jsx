@@ -44,7 +44,7 @@ const Link = styled.a`
   color: var(--desaturated-blue);
 
   @media (min-width: 1440px) {
-    padding: 26px 32px;
+    /* padding: 26px 32px; */
     margin: 0;
     padding: 0;
 
