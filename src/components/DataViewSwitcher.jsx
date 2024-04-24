@@ -34,6 +34,14 @@ const Link = styled.a`
   display: flex;
   justify-content: space-between;
   padding: 24px;
+  text-transform: capitalize;
+
+  &:hover {
+    color: var(--white);
+  }
+  &:active {
+    color: var(--white);
+  }
 `;
 
 const LinkWrapper = styled.div`

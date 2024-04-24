@@ -41,11 +41,11 @@ export default function Cards({ data, selectedView }) {
                 </div>
               </TitleandEllipsisWrapper>
               <WrapHours>
-                <span>{current}hrs</span>
-                <span>
+                <CurrentHrs>{current}hrs</CurrentHrs>
+                <PreviousHrs>
                   <small>Last Week - </small>
                   {previous}hrs
-                </span>
+                </PreviousHrs>
               </WrapHours>
             </ContentDiv>
           </Wrapper>
@@ -114,4 +114,14 @@ const SVG = styled.img`
   opacity: 0.8;
   height: 78px;
   width: 78px;
+`;
+
+const CurrentHrs = styled.span`
+  font-size: 32px;
+  font-weight: 300;
+`;
+
+const PreviousHrs = styled.span`
+  font-size: 15px;
+  color: var(--pale-blue);
 `;
