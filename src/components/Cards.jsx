@@ -101,7 +101,7 @@ const ContentDiv = styled.div`
 `;
 
 const Title = styled.h2`
-  font-size: 18px;
+  font-size: 1.125rem;
   color: var(--white);
   @media (min-width: 1440px) {
     margin-bottom: 24px;
@@ -139,16 +139,16 @@ const SVG = styled.img`
 `;
 
 const CurrentHrs = styled.span`
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: 300;
   color: var(--white);
   @media (min-width: 1440px) {
-    font-size: 56px;
+    font-size: 3.5rem;
   }
 `;
 
 const PreviousHrs = styled.span`
-  font-size: 15px;
+  font-size: 0.938rem;
   color: var(--pale-blue);
 `;
 

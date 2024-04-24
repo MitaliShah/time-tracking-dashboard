@@ -40,11 +40,11 @@ const ProfileInfoWrapper = styled.div`
 
 const Heading = styled.h1`
   color: var(--white);
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 300;
 
   @media (min-width: 1440px) {
-    font-size: 40px;
+    font-size: 2.5rem;
     padding-bottom: 43px;
   }
 `;
@@ -60,6 +60,6 @@ const LastName = styled.span`
 `;
 
 const Small = styled.small`
-  font-size: 15px;
+  font-size: 0.938rem;
   color: var(--pale-blue);
 `;
