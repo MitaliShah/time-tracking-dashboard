@@ -82,6 +82,7 @@ const Wrapper = styled.div`
   @media (min-width: 1440px) {
     min-height: 256px;
     margin-top: 0;
+    border-radius: 15px;
   }
 `;
 
@@ -93,6 +94,10 @@ const ContentDiv = styled.div`
   margin-left: -0.5px;
   margin-right: -0.5px;
   z-index: 1;
+
+  @media (min-width: 1440px) {
+    border-radius: 15px;
+  }
 `;
 
 const Title = styled.h2`
@@ -117,7 +122,6 @@ const WrapHours = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* margin-top: 6px; */
 
   @media (min-width: 1440px) {
     align-items: flex-start;
@@ -150,7 +154,6 @@ const PreviousHrs = styled.span`
 const Grid = styled.div`
   @media (min-width: 1440px) {
     display: grid;
-    /* grid-template-columns: repeat(3, 1fr); */
     grid-template-columns: repeat(3, 255px);
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 30px;
