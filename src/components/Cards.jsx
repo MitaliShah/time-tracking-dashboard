@@ -1,7 +1,7 @@
 import workImg from "../../public/images/icon-study.svg";
 import styled from "styled-components";
 import playImg from "../../public/images/icon-play.svg";
-
+import iconEllipsis from "../../public/images/icon-ellipsis.svg";
 export default function Cards({ data, selectedView }) {
   return (
     <div>
@@ -13,13 +13,15 @@ export default function Cards({ data, selectedView }) {
 
         return (
           <Wrapper key={title} title={title}>
-            <div>
-              <div>
-                <h2>{title}</h2>
-                <div>{/* <img src={workImg} alt="" /> */}</div>
-              </div>
+            <ContentDiv>
+              <TitleandEllipsisWrapper>
+                <Title>{title}</Title>
+                <div>
+                  <img src={iconEllipsis} alt="" />
+                </div>
+              </TitleandEllipsisWrapper>
               <div></div>
-            </div>
+            </ContentDiv>
           </Wrapper>
         );
       })}
@@ -42,4 +44,40 @@ const Wrapper = styled.div`
       : props.title === "Self Care"
       ? "var(--self-care-soft-orange)"
       : null};
+  /* background-image: ${(props) =>
+    props.title === "Work" ? `url(workImg)` : null};
+  background-size: cover;
+  background-position: right;
+  height: 78px;
+  width: 78px; */
+  height: 160px;
+  display: flex;
+  flex-direction: column-reverse;
+  margin-top: 24px;
+`;
+
+// const SVG = styled.div`
+//   position: absolute;
+//   background-image: ${(props) =>
+//     props.title === "Work" ? `url(workImg)` : null};
+//   background-size: cover;
+//   background-position: right;
+//   height: 78px;
+//   width: 78px;
+// `;
+
+const ContentDiv = styled.div`
+  padding: 28px 24px;
+  background-color: var(--dark-blue);
+  /* padding-top: 38px; */
+`;
+
+const Title = styled.h2`
+  font-size: 18px;
+`;
+
+const TitleandEllipsisWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `;
