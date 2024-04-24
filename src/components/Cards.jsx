@@ -1,7 +1,12 @@
-import workImg from "../../public/images/icon-study.svg";
-import styled from "styled-components";
-import playImg from "../../public/images/icon-play.svg";
+import workIcon from "../../public/images/icon-work.svg";
+import playIcon from "../../public/images/icon-play.svg";
+import selfCareIcon from "../../public/images/icon-self-care.svg";
+import socialIcon from "../../public/images/icon-social.svg";
+import studyIcon from "../../public/images/icon-study.svg";
+import exerciseIcon from "../../public/images/icon-exercise.svg";
 import iconEllipsis from "../../public/images/icon-ellipsis.svg";
+import styled from "styled-components";
+
 export default function Cards({ data, selectedView }) {
   return (
     <div>
@@ -9,10 +14,25 @@ export default function Cards({ data, selectedView }) {
         const { title, timeframes } = data;
         const { current } = timeframes[selectedView];
         const { previous } = timeframes[selectedView];
-        console.log(`Current is :`, current, `Previous is`, previous);
 
+        // SVG icon based on the value of title
+        const svg =
+          title === "Work"
+            ? workIcon
+            : title === "Play"
+            ? playIcon
+            : title === "Study"
+            ? studyIcon
+            : title === "Exercise"
+            ? exerciseIcon
+            : title === "Social"
+            ? socialIcon
+            : title === "Self Care"
+            ? selfCareIcon
+            : null;
         return (
           <Wrapper key={title} title={title}>
+            <SVG src={svg} alt="" />
             <ContentDiv>
               <TitleandEllipsisWrapper>
                 <Title>{title}</Title>
@@ -35,6 +55,7 @@ export default function Cards({ data, selectedView }) {
   );
 }
 
+// Background color based on the value of title
 const Wrapper = styled.div`
   background-color: ${(props) =>
     props.title === "Work"
@@ -50,34 +71,23 @@ const Wrapper = styled.div`
       : props.title === "Self Care"
       ? "var(--self-care-soft-orange)"
       : null};
-  /* background-image: ${(props) =>
-    props.title === "Work" ? `url(workImg)` : null};
-  background-size: cover;
-  background-position: right;
-  height: 78px;
-  width: 78px; */
+
   height: 160px;
   display: flex;
   flex-direction: column-reverse;
   margin-top: 24px;
   border-radius: 8px;
+  position: relative;
 `;
-
-// const SVG = styled.div`
-//   position: absolute;
-//   background-image: ${(props) =>
-//     props.title === "Work" ? `url(workImg)` : null};
-//   background-size: cover;
-//   background-position: right;
-//   height: 78px;
-//   width: 78px;
-// `;
 
 const ContentDiv = styled.div`
   padding: 28px 24px;
   background-color: var(--dark-blue);
   border-radius: 8px;
-  margin-bottom: -0.5px;
+  margin-bottom: -0.8px;
+  margin-left: -0.5px;
+  margin-right: -0.5px;
+  z-index: 1;
 `;
 
 const Title = styled.h2`
@@ -95,4 +105,13 @@ const WrapHours = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-top: 6px;
+`;
+
+const SVG = styled.img`
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0.8;
+  height: 78px;
+  width: 78px;
 `;
