@@ -36,15 +36,24 @@ const Link = styled.a`
   padding: 24px;
   text-transform: capitalize;
 
-  &:hover {
-    color: var(--white);
-  }
-  &:active {
-    color: var(--white);
+  @media (min-width: 1440px) {
+    padding: 26px 32px;
+    margin: 0;
+
+    /* gap: 21px; */
+    &:hover {
+      color: var(--white);
+    }
+    &:active {
+      color: var(--white);
+    }
   }
 `;
 
 const LinkWrapper = styled.div`
   display: flex;
   justify-content: space-between;
+  @media (min-width: 1440px) {
+    flex-direction: column;
+  }
 `;

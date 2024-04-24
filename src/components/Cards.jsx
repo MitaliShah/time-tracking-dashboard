@@ -9,7 +9,7 @@ import styled from "styled-components";
 
 export default function Cards({ data, selectedView }) {
   return (
-    <div>
+    <Grid>
       {data.map((data) => {
         const { title, timeframes } = data;
         const { current } = timeframes[selectedView];
@@ -51,7 +51,7 @@ export default function Cards({ data, selectedView }) {
           </Wrapper>
         );
       })}
-    </div>
+    </Grid>
   );
 }
 
@@ -81,7 +81,7 @@ const Wrapper = styled.div`
 `;
 
 const ContentDiv = styled.div`
-  padding: 28px 24px;
+  padding: 22px 24px;
   background-color: var(--dark-blue);
   border-radius: 8px;
   margin-bottom: -0.8px;
@@ -124,4 +124,14 @@ const CurrentHrs = styled.span`
 const PreviousHrs = styled.span`
   font-size: 15px;
   color: var(--pale-blue);
+`;
+
+const Grid = styled.div`
+  @media (min-width: 1440px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+  }
 `;
