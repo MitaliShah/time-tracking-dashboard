@@ -20,7 +20,13 @@ export default function Cards({ data, selectedView }) {
                   <img src={iconEllipsis} alt="" />
                 </div>
               </TitleandEllipsisWrapper>
-              <div></div>
+              <WrapHours>
+                <span>{current}hrs</span>
+                <span>
+                  <small>Last Week - </small>
+                  {previous}hrs
+                </span>
+              </WrapHours>
             </ContentDiv>
           </Wrapper>
         );
@@ -82,4 +88,11 @@ const TitleandEllipsisWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+`;
+
+const WrapHours = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 6px;
 `;
