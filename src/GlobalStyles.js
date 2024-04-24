@@ -32,6 +32,9 @@ const GlobalStyles = createGlobalStyle`
         font-weight: 300;
         font-style: normal;
         background-color: hsl(0, 0%, 0%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     :root{

@@ -28,4 +28,5 @@ const Main = styled.main`
   max-width: min-content;
   max-width: 23.438rem;
   font-size: 18px;
+  margin: 80px 24px;
 `;
