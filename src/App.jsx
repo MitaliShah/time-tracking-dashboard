@@ -25,7 +25,7 @@ const Main = styled.main`
   display: grid;
   grid-template-rows: repeat(2, auto);
   gap: 24px;
-  /* max-width: min-content; */
+  max-width: min-content;
   max-width: 23.438rem;
   font-size: 18px;
   margin: 80px 24px;

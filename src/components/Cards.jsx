@@ -78,6 +78,11 @@ const Wrapper = styled.div`
   margin-top: 24px;
   border-radius: 8px;
   position: relative;
+
+  @media (min-width: 1440px) {
+    min-height: 256px;
+    margin-top: 0;
+  }
 `;
 
 const ContentDiv = styled.div`
@@ -105,6 +110,11 @@ const WrapHours = styled.div`
   justify-content: space-between;
   align-items: center;
   /* margin-top: 6px; */
+
+  @media (min-width: 1440px) {
+    align-items: flex-start;
+    flex-direction: column;
+  }
 `;
 
 const SVG = styled.img`

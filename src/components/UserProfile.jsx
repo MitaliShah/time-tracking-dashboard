@@ -24,13 +24,14 @@ const Img = styled.img`
 
 const ProfileInfoWrapper = styled.div`
   display: flex;
-  max-width: 327px;
+  /* max-width: 327px; */
   padding: 34px 32px;
   gap: 20px;
   background-color: var(--blue);
   border-radius: 8px;
 
   @media (min-width: 1440px) {
+    max-width: 255px;
     flex-direction: column;
     gap: 43px;
     padding: 37px 32px;
