@@ -12,7 +12,10 @@ function App() {
 
   return (
     <Main>
-      <DataViewSwitcher setSelectedView={setSelectedView} />
+      <DataViewSwitcher
+        selectedView={selectedView}
+        setSelectedView={setSelectedView}
+      />
       <Cards data={data} selectedView={selectedView} />
       <GlobalStyles />
     </Main>

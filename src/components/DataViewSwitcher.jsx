@@ -2,7 +2,7 @@ import styled from "styled-components";
 import UserProfile from "./UserProfile";
 const allViews = ["daily", "weekly", "monthly"];
 
-export default function DataViewSwitcher({ setSelectedView }) {
+export default function DataViewSwitcher({ selectedView, setSelectedView }) {
   return (
     <Wrapper>
       <UserProfile />
@@ -14,6 +14,7 @@ export default function DataViewSwitcher({ setSelectedView }) {
                 event.preventDefault();
                 setSelectedView(view);
               }}
+              className={selectedView === view ? "active" : null}
               href=""
               key={view}
             >
@@ -42,6 +43,10 @@ const Link = styled.a`
   padding: 24px;
   text-transform: capitalize;
   color: var(--desaturated-blue);
+
+  &.active {
+    color: var(--white);
+  }
 
   @media (min-width: 1440px) {
     margin: 0;
